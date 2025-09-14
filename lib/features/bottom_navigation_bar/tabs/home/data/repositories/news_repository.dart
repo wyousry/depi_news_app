@@ -12,7 +12,7 @@ class NewsRepository {
       final response = await http
           .get(
             Uri.parse(
-              "$_baseUrl/top-headlines?country=us&pageSize=20&apiKey=$_apiKey",
+              "$_baseUrl/top-headlines?country=us&pageSize=30&apiKey=$_apiKey",
             ),
             headers: {'Content-Type': 'application/json'},
           )
@@ -46,7 +46,7 @@ class NewsRepository {
       final response = await http
           .get(
             Uri.parse(
-              "$_baseUrl/everything?q=$query&pageSize=20&sortBy=publishedAt&apiKey=$_apiKey",
+              "$_baseUrl/everything?q=$query&pageSize=30&sortBy=publishedAt&language=en&apiKey=$_apiKey",
             ),
             headers: {'Content-Type': 'application/json'},
           )
@@ -80,7 +80,7 @@ class NewsRepository {
       final response = await http
           .get(
             Uri.parse(
-              "$_baseUrl/top-headlines?category=$category&pageSize=20&apiKey=$_apiKey",
+              "$_baseUrl/top-headlines?category=$category&pageSize=30&apiKey=$_apiKey",
             ),
             headers: {'Content-Type': 'application/json'},
           )
