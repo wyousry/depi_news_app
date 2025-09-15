@@ -5,6 +5,7 @@ import 'package:depi_news_app/features/bottom_navigation_bar/tabs/home/widget/ne
 import 'package:depi_news_app/features/bottom_navigation_bar/tabs/home/widget/search_bar.dart';
 import 'package:depi_news_app/features/bottom_navigation_bar/tabs/search/cubit/search_cubit.dart';
 import 'package:depi_news_app/features/bottom_navigation_bar/tabs/search/cubit/search_state.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -40,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               } else if (searchState is SearchError) {
                 return Center(
-                  child: Text("Error: ${searchState.message}"),
+                  child: Text("${"error".tr()}: ${searchState.message}"),
                 );
               }
               return BlocBuilder<NewsCubit, NewsState>(
@@ -71,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           const SizedBox(height: 16),
                           Text(
-                            " It seems there is a problem with the server",
+                            " It seems there is a problem with the server".tr(),
                             style: TextStyle(
                               fontSize: 16,
                               color: AppColor.assetsColor,
@@ -91,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             onPressed: () {
                               context.read<NewsCubit>().loadNews();
                             },
-                            child: const Text(' Try Again '),
+                            child: const Text("try_again").tr(),
                           ),
                         ],
                       ),

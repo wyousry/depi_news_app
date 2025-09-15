@@ -2,9 +2,21 @@
 "news": "News",
 "search": "Search",
 "home": "Home",
-"saved": "Saved"
-
-
+"saved": "Saved",
+"error": "Error",
+" It seems there is a problem with the server":"It seems there is a problem with the server",
+"try_again": "Try Again",
+"technology": "Technology",
+"science": "Science",
+"business": "Business",
+"politics": "Politics",
+"health": "Health",
+"sports": "Sports",
+"general": "General",
+"now": "Now",
+"no_results_found": "No results found",
+"search_for_news_above": "Search for news above",
+"recent_searches": "Recent searches"
 
 
 

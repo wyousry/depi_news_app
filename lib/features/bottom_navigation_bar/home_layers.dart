@@ -55,10 +55,10 @@ class _HomeLayersState extends State<HomeLayers> {
             appBar: AppBar(
               title: Text(
                 _currentIndex == 0
-                    ? "News"
+                    ? "news".tr()
                     : _currentIndex == 1
-                        ? "Search"
-                        : "Saved",
+                        ? "search".tr()
+                        : "saved".tr(),
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
@@ -110,21 +110,21 @@ class _HomeLayersState extends State<HomeLayers> {
                     _currentIndex = index;
                   });
                 },
-                items: const [
+                items:  [
                   BottomNavigationBarItem(
                     icon: Icon(Icons.home_outlined),
                     activeIcon: Icon(Icons.home),
-                    label: "Home",
+                    label: "home".tr(),
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.search_outlined),
                     activeIcon: Icon(Icons.search),
-                    label: "Search",
+                    label: "search".tr(),
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.bookmarks_outlined),
                     activeIcon: Icon(Icons.bookmarks),
-                    label: "Saved",
+                    label: "saved".tr(),
                   ),
                 ],
               ),

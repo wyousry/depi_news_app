@@ -1,4 +1,3 @@
-
 import '../../home/data/models/news_model.dart';
 
 abstract class SearchState {}

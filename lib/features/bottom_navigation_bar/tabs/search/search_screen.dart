@@ -3,6 +3,7 @@ import 'package:depi_news_app/features/bottom_navigation_bar/tabs/home/widget/ne
 import 'package:depi_news_app/features/bottom_navigation_bar/tabs/home/widget/search_bar.dart';
 import 'package:depi_news_app/features/bottom_navigation_bar/tabs/search/cubit/search_cubit.dart';
 import 'package:depi_news_app/features/bottom_navigation_bar/tabs/search/cubit/search_state.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -31,7 +32,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 return const Center(child: CircularProgressIndicator());
               } else if (state is SearchLoaded) {
                 if (state.news.isEmpty) {
-                  return const Center(child: Text("No results found"));
+                  return  Center(child: Text("no_results_found".tr()));
                 }
                 return ListView.builder(
                   itemCount: state.news.length,
@@ -46,13 +47,13 @@ class _SearchScreenState extends State<SearchScreen> {
 
                 final recents = searchCubit.recentSearches;
                 if (recents.isEmpty) {
-                  return const Center(child: Text("Search for news above"));
+                  return  Center(child: Text("search_for_news_above".tr()));
                 }
                 return ListView(
                   padding: const EdgeInsets.all(16),
                   children: [
-                    const Text(
-                      "Recent searches",
+                     Text(
+                      "recent_searches ".tr(),
                       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 8),

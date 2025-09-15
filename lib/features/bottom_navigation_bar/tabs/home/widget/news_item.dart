@@ -113,7 +113,7 @@ class NewsItem extends StatelessWidget {
 
   Color _getCategoryColor(String category) {
     switch (category.toLowerCase()) {
-      case 'technology':
+      case "technology":
         return  AppColor.techColor; 
       case 'politics':
         return AppColor.politicsColor; 

@@ -1,6 +1,7 @@
 import 'package:depi_news_app/core/app_color.dart';
 import 'package:depi_news_app/features/bottom_navigation_bar/tabs/search/cubit/search_cubit.dart';
 import 'package:depi_news_app/features/bottom_navigation_bar/tabs/search/cubit/search_state.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,7 +35,7 @@ class FinalSearchBar extends StatelessWidget {
               context.read<SearchCubit>().searchNews(value);
             },
             decoration: InputDecoration(
-              hintText: 'Search',
+              hintText: 'search'.tr(),
               hintStyle: const TextStyle(color: AppColor.assetsColor, fontSize: 16),
               prefixIcon: const Icon(Icons.search, color: AppColor.assetsColor, size: 24),
               suffixIcon: state is! SearchEmpty && controller.text.isNotEmpty

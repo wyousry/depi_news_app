@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+
 class NewsModel {
   final String title;
   final String description;
@@ -37,19 +39,19 @@ class NewsModel {
     String content = "$title $description".toLowerCase();
     
     if (content.contains('tech') || content.contains('ai') || content.contains('software') || content.contains('computer')) {
-      return 'Technology';
+      return 'technology'.tr();
     } else if (content.contains('polit') || content.contains('government') || content.contains('election')) {
-      return 'Politics';
+      return 'politics'.tr();
     } else if (content.contains('sport') || content.contains('football') || content.contains('soccer') || content.contains('championship')) {
-      return 'Sports';
+      return 'sports'.tr();
     } else if (content.contains('science') || content.contains('research') || content.contains('study') || content.contains('discovery')) {
-      return 'Science';
+      return 'science'.tr();
     } else if (content.contains('business') || content.contains('market') || content.contains('economic') || content.contains('financial')) {
-      return 'Business';
+      return 'business'.tr();
     } else if (content.contains('health') || content.contains('medical') || content.contains('hospital')) {
-      return 'Health';
+      return 'health'.tr();
     } else {
-      return 'General';
+      return 'general'.tr();
     }
   }
 
@@ -64,7 +66,7 @@ class NewsModel {
         return '${difference.inDays}d';
       }
     } catch (e) {
-      return 'now';
+      return 'now'.tr();
     }
   }
 }
