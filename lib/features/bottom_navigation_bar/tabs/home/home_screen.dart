@@ -25,7 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Column(
       children: [
         FinalSearchBar(controller: _searchController),
-
         Expanded(
           child: BlocBuilder<SearchCubit, SearchState>(
             builder: (context, searchState) {

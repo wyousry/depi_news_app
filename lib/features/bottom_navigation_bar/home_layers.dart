@@ -72,7 +72,7 @@ class _HomeLayersState extends State<HomeLayers> {
                   ? [
                       IconButton(
                         onPressed: () {
-          
+                          Navigator.pushNamed(context, '/setting');
                         },
                         icon: const Icon(
                           Icons.settings_outlined,

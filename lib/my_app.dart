@@ -1,4 +1,5 @@
 import 'package:depi_news_app/features/bottom_navigation_bar/home_layers.dart';
+import 'package:depi_news_app/features/setting/setting_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,10 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home: HomeLayers());
+      routes: {
+        '/': (context) => const HomeLayers(),
+        '/setting': (context) => const SettingScreen(),
+      },
+    );
   }
 }
