@@ -40,12 +40,12 @@ class NewsRepository {
     }
   }
 
-  Future<List<NewsModel>> searchNews(String query) async {
+  Future<List<NewsModel>> searchNews(String query, String language) async {
     try {
       final response = await http
           .get(
             Uri.parse(
-              "$_baseUrl/everything?q=$query&pageSize=30&sortBy=publishedAt&language=en&apiKey=$_apiKey",
+              "$_baseUrl/everything?q=$query&pageSize=30&sortBy=publishedAt&language=$language&apiKey=$_apiKey",
             ),
             headers: {'Content-Type': 'application/json'},
           )

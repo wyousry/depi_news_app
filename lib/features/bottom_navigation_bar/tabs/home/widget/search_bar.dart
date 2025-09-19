@@ -31,8 +31,8 @@ class FinalSearchBar extends StatelessWidget {
           return TextField(
             controller: controller,
             readOnly: readOnly,
-            onChanged: (value) {
-              context.read<SearchCubit>().searchNews(value);
+            onSubmitted: (value) {
+              context.read<SearchCubit>().searchNews(value, EasyLocalization.of(context)!.currentLocale.toString());
             },
             decoration: InputDecoration(
               hintText: 'search'.tr(),

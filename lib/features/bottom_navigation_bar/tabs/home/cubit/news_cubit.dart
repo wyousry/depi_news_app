@@ -17,7 +17,7 @@ class NewsCubit extends Cubit<NewsState> {
     }
   }
 
-  Future<void> searchNews(String query) async {
+  Future<void> searchNews(String query,String language) async {
     if (query.isEmpty) {
       loadNews();
       return;
@@ -25,7 +25,7 @@ class NewsCubit extends Cubit<NewsState> {
     
     emit(NewsLoading());
     try {
-      final articles = await repository.searchNews(query);
+      final articles = await repository.searchNews(query, language);
       emit(NewsLoaded(articles));
     } catch (e) {
       emit(NewsError(e.toString()));

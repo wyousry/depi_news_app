@@ -11,7 +11,7 @@ class SearchCubit extends Cubit<SearchState> {
     _loadRecentSearches();
   }
 
-  Future<void> searchNews(String query) async {
+  Future<void> searchNews(String query,String language) async {
     if (query.isEmpty) {
       emit(SearchEmpty());
       return;
@@ -19,7 +19,7 @@ class SearchCubit extends Cubit<SearchState> {
 
     emit(SearchLoading());
     try {
-      final results = await newsRepository.searchNews(query);
+      final results = await newsRepository.searchNews(query, language);
 
       await _addRecentSearch(query);
 

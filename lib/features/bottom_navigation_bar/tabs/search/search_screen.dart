@@ -62,7 +62,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           title: Text(query),
                           onTap: () {
                             _controller.text = query;
-                            context.read<SearchCubit>().searchNews(query);
+                            context.read<SearchCubit>().searchNews(query, EasyLocalization.of(context)!.currentLocale.toString());
                           },
                         )),
                   ],
